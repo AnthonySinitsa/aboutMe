@@ -2,18 +2,17 @@
 
 ## aboutMe
 
-I build an app with a direct and powerful purpose. It does all of the things that it accomplishes well. I should describe the purpose and functionality so those that visit my README understand the app
+-This site is about me, it prompts the user for a name and will ask 5 yes/no question about me.
 
 ### Author: Anthony Sinitsa
 
 ### Links and Resources
 
-- [submission PR](http://xyz.com)
-- Any Links you used as reference
+<!-- - https://codefellows.github.io/code-201-guide/curriculum/class-02/project-setup -->
 
 ### Lighthouse Accessibility Report Score
 
-- Provide a screenshot of your score after running a Lighthouse Accessibility report.
+![accessibility score](lighthouseLab2.png)
 
 ### Reflections and Comments
 
