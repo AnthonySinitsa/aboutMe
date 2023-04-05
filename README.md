@@ -2,7 +2,7 @@
 
 ## aboutMe
 
--This site is about me, it prompts the user for a name and will ask 5 yes/no question about me.
+-This site is about me, it prompts the user for a name and will ask 5 yes/no question about me. it now has mini game, user gets prompted a question and will have to answer within a certain amount of guesses.
 
 ### Author: Anthony Sinitsa
 
@@ -13,6 +13,7 @@
 ### Lighthouse Accessibility Report Score
 
 ![accessibility score](lighthouseLab2.png)
+![accessibility score](lightLab2part2.png)
 
 ### Reflections and Comments
 
