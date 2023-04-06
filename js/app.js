@@ -65,70 +65,79 @@ function workFun(){
 }
 workFun();
 
-let goal = prompt("I want to work as a teacher? yes or no").toLowerCase();
-if (goal === "no") {
-  alert("Correct");
-  score++;
-  //console.log("Correct");
-} else if (goal === "yes") {
-  alert("Wrong");
-  //console.log("Wrong");
-} else {
-  prompt("Please answer yes or no");
+function goalFun(){
+  let goal = prompt("I want to work as a teacher? yes or no").toLowerCase();
+  if (goal === "no") {
+    alert("Correct");
+    score++;
+    //console.log("Correct");
+  } else if (goal === "yes") {
+    alert("Wrong");
+    //console.log("Wrong");
+  } else {
+    prompt("Please answer yes or no");
+  }
 }
+goalFun();
 
 //welcome the user with their name
 alert(`Welcome to my page ${name}`);
 
-//guess a number BETWEEN 1 AND 10
-let correctAnswer = Math.floor(Math.random() * 10) + 1;
-let attempts = 4;
+function guessGame(){
+  //guess a number BETWEEN 1 AND 10
+  let correctAnswer = Math.floor(Math.random() * 10) + 1;
+  let attempts = 4;
 
-while (attempts > 0) {
-  let answer = prompt("Guess a number between 1 and 10: ");
+  while (attempts > 0) {
+    let answer = prompt("Guess a number between 1 and 10: ");
 
-  if (parseInt(answer) === correctAnswer) {
-    alert("Correct!");
-    score++;
-    break;
-  } else if (parseInt(answer) > correctAnswer) {
-    alert("Too high, Try again: ");
-  } else {
-    alert("Too low, Try again: ");
+    if (parseInt(answer) === correctAnswer) {
+      alert("Correct!");
+      score++;
+      break;
+    } else if (parseInt(answer) > correctAnswer) {
+      alert("Too high, Try again: ");
+    } else {
+      alert("Too low, Try again: ");
+    }
+
+    attempts--; //so that it doesn't keep reprompting
   }
 
-  attempts--; //so that it doesn't keep reprompting
+  if (attempts === 0) {
+    alert(`You ran our of guesses, The correct answer was ${correctAnswer}.`);
+  }
 }
+guessGame();
 
-if (attempts === 0) {
-  alert(`You ran our of guesses, The correct answer was ${correctAnswer}.`);
-}
+function guessColor(){
+  //favorite color
+  let possibleAnswers = ["red", "blue", "orange"];
+  let attempts2 = 6;
+  let correct = false;
 
-//favorite color
-let possibleAnswers = ["red", "blue", "orange"];
-let attempts2 = 6;
-let correct = false;
+  while (attempts2 > 0 && !correct) {
+    let answer2 = prompt("Guess a color: ");
 
-while (attempts2 > 0 && !correct) {
-  let answer2 = prompt("Guess a color: ");
+    for (let i = 0; i < possibleAnswers.length; i++) {
+      if (answer2.toLowerCase() === possibleAnswers[i]) {
+        alert("Correct");
+        score++;
+        correct = true;
+        break;
+      }
+    }
 
-  for (let i = 0; i < possibleAnswers.length; i++) {
-    if (answer2.toLowerCase() === possibleAnswers[i]) {
-      alert("Correct");
-      score++;
-      correct = true;
-      break;
+    if (!correct) {
+      alert("Incorrect, try again: ");
+      attempts2--;
     }
   }
 
   if (!correct) {
-    alert("Incorrect, try again: ");
-    attempts2--;
+    alert(`You ran out of attempts.`);
   }
 }
-
-if (!correct) {
-  alert(`You ran out of attempts.`);
-}
+guessColor();
 
 alert(`Your score was ${score}`);
