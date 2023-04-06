@@ -35,17 +35,20 @@ function livingFun(){
 
 livingFun();
 
-let education = prompt("Highest education an AA? yes or no").toLowerCase();
-if (education === "yes") {
-  alert("Correct");
-  score++;
-  //console.log("Correct");
-} else if (education === "no") {
-  alert("Wrong");
-  //console.log("Wrong");
-} else {
-  prompt("Please answer yes or no");
+function educationFun(){
+  let education = prompt("Highest education an AA? yes or no").toLowerCase();
+  if (education === "yes") {
+    alert("Correct");
+    score++;
+    //console.log("Correct");
+  } else if (education === "no") {
+    alert("Wrong");
+    //console.log("Wrong");
+  } else {
+    prompt("Please answer yes or no");
+  }
 }
+educationFun();
 
 let work = prompt("I worked as a courier? yes or no").toLocaleLowerCase();
 if (work === "yes") {
