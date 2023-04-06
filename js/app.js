@@ -50,17 +50,20 @@ function educationFun(){
 }
 educationFun();
 
-let work = prompt("I worked as a courier? yes or no").toLocaleLowerCase();
-if (work === "yes") {
-  alert("Correct");
-  score++;
-  //console.log("Correct");
-} else if (work === "no") {
-  alert("Wrong");
-  //console.log("Wrong");
-} else {
-  prompt("Please answer yes or no");
+function workFun(){
+  let work = prompt("I worked as a courier? yes or no").toLocaleLowerCase();
+  if (work === "yes") {
+    alert("Correct");
+    score++;
+    //console.log("Correct");
+  } else if (work === "no") {
+    alert("Wrong");
+    //console.log("Wrong");
+  } else {
+    prompt("Please answer yes or no");
+  }
 }
+workFun();
 
 let goal = prompt("I want to work as a teacher? yes or no").toLowerCase();
 if (goal === "no") {
