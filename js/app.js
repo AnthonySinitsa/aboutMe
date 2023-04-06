@@ -64,6 +64,7 @@ if (goal === "no") {
   prompt("Please answer yes or no");
 }
 
+//welcome the user with their name
 alert(`Welcome to my page ${name}`);
 
 //guess a number BETWEEN 1 AND 10
