@@ -2,19 +2,21 @@
 
 let score = 0;
 
-let name = prompt("What is your name: ");
-
-let age = prompt("Am I 20? yes or no").toLowerCase();
-if (age === "yes") {
-  alert("Correct");
-  score++;
-  //console.log("Correct");
-} else if (age === "no") {
-  alert("Wrong");
-  //console.log("Wrong");
-} else {
-  prompt("Please answer yes or no");
+let name = prompt('What is your name: ');
+function ageFun(){
+  let age = prompt("Am I 20? yes or no").toLowerCase();
+  if (age === "yes") {
+    alert("Correct");
+    score++;
+    //console.log("Correct");
+  } else if (age === "no") {
+    alert("Wrong");
+    //console.log("Wrong");
+  } else {
+    prompt("Please answer yes or no");
+  }
 }
+ageFun();
 
 let living = prompt("Do I live in Florida? yes or no").toLowerCase();
 if (living === "no") {
