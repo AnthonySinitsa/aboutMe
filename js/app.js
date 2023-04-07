@@ -2,89 +2,48 @@
 
 let score = 0;
 
-let name = prompt('What is your name: ');
+let name = prompt("What is your name: ");
 
-function ageFun(){
-  let age = prompt("Am I 20? yes or no").toLowerCase();
-  if (age === "yes") {
+const questions = [
+  {
+    question: "Am I 20?",
+    answer: "yes",
+  },
+  {
+    question: "Do I live in Florida?",
+    answer: "no",
+  },
+  {
+    question: "Highest education an AA?",
+    answer: "yes",
+  },
+  {
+    question: "I worked as a courier?",
+    answer: "yes",
+  },
+  {
+    question: "I want to work as a teacher?",
+    answer: "no",
+  },
+];
+
+for (let i = 0; i < questions.length; i++) {
+  let response = prompt(questions[i].question).toLowerCase();
+
+  if (response === questions[i].answer) {
     alert("Correct");
     score++;
-    //console.log("Correct");
-  } else if (age === "no") {
-    alert("Wrong");
-    //console.log("Wrong");
-  } else {
+  } else if (response !== "yes" && response !== "no") {
     prompt("Please answer yes or no");
-  }
-}
-ageFun();
-
-function livingFun(){
-  let living = prompt("Do I live in Florida? yes or no").toLowerCase();
-  if (living === "no") {
-    alert("Correct");
-    score++;
-    //console.log("Correct");
-  } else if (living === "yes") {
-    alert("Wrong");
-    //console.log("Wrong");
+    i--; //decrement i so the current question is asked again
   } else {
-    prompt("Please answer yes or no");
+    alert("Wrong");
   }
 }
 
-livingFun();
-
-function educationFun(){
-  let education = prompt("Highest education an AA? yes or no").toLowerCase();
-  if (education === "yes") {
-    alert("Correct");
-    score++;
-    //console.log("Correct");
-  } else if (education === "no") {
-    alert("Wrong");
-    //console.log("Wrong");
-  } else {
-    prompt("Please answer yes or no");
-  }
-}
-educationFun();
-
-function workFun(){
-  let work = prompt("I worked as a courier? yes or no").toLocaleLowerCase();
-  if (work === "yes") {
-    alert("Correct");
-    score++;
-    //console.log("Correct");
-  } else if (work === "no") {
-    alert("Wrong");
-    //console.log("Wrong");
-  } else {
-    prompt("Please answer yes or no");
-  }
-}
-workFun();
-
-function goalFun(){
-  let goal = prompt("I want to work as a teacher? yes or no").toLowerCase();
-  if (goal === "no") {
-    alert("Correct");
-    score++;
-    //console.log("Correct");
-  } else if (goal === "yes") {
-    alert("Wrong");
-    //console.log("Wrong");
-  } else {
-    prompt("Please answer yes or no");
-  }
-}
-goalFun();
-
-//welcome the user with their name
 alert(`Welcome to my page ${name}`);
 
-function guessGame(){
-  //guess a number BETWEEN 1 AND 10
+function guessGame() {
   let correctAnswer = Math.floor(Math.random() * 10) + 1;
   let attempts = 4;
 
@@ -101,17 +60,17 @@ function guessGame(){
       alert("Too low, Try again: ");
     }
 
-    attempts--; //so that it doesn't keep reprompting
+    attempts--;
   }
 
   if (attempts === 0) {
-    alert(`You ran our of guesses, The correct answer was ${correctAnswer}.`);
+    alert(`You ran out of guesses, The correct answer was ${correctAnswer}.`);
   }
 }
+
 guessGame();
 
-function guessColor(){
-  //favorite color
+function guessColor() {
   let possibleAnswers = ["red", "blue", "orange"];
   let attempts2 = 6;
   let correct = false;
@@ -138,6 +97,7 @@ function guessColor(){
     alert(`You ran out of attempts.`);
   }
 }
+
 guessColor();
 
 alert(`Your score was ${score}`);
