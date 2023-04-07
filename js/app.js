@@ -4,7 +4,7 @@ let score = 0;
 
 let name = prompt("What is your name: ");
 
-const questions = [
+let questions = [
   {
     question: "Am I 20?",
     answer: "yes",
