@@ -14,6 +14,7 @@
 
 ![accessibility score](lighthouseLab2.png)
 ![accessibility score](lightLab2part2.png)
+![accessibility score](lightshouse3.png)
 
 ### Reflections and Comments
 
